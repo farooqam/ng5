@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { SummaryComponent } from '../summary/summary/summary.component';
 import { StockService } from '../../services/stock/stock.service';
+import { StockServiceSettings } from '../../services/stock/stockServiceSettings';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { StockService } from '../../services/stock/stock.service';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [StockService],
+  providers: [StockService, StockServiceSettings],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

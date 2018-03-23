@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Stock } from '../../../services/stock/stock.service';
+import { Stock } from '../../../services/stock/stock';
 
 @Component({
   selector: 'stock-summary',
