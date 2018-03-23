@@ -12,7 +12,7 @@ export class StockService {
     constructor(
         private _settings: StockServiceSettings,
         private _http: HttpClient) { 
-            this.stocks = this.load(['MSFT']);
+            this.stocks = this.load(this._settings.stocks);
         }
 
     get(): Array<string> {

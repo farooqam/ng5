@@ -18,6 +18,8 @@
     </ul>
   </div>
 </nav>
-<main *ngIf="stocks">
-  <stock-summary [stock]="stocks[0]"></stock-summary>
+<main>
+  <div class="container-fluid">
+        <stock-dashboard></stock-dashboard>
+  </div>
 </main>

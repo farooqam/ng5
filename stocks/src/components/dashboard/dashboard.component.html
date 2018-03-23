@@ -1,0 +1,8 @@
+<div *ngIf="!stocks">
+  Loading...
+</div>
+<div class="row">
+    <div class="col-sm-3" *ngFor="let stock of stocks">
+        <stock-summary [stock]="stock"></stock-summary>
+      </div>
+</div>
