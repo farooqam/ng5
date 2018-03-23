@@ -1,0 +1,27 @@
+<div  class="card text-white" 
+      style="width: 18rem;" 
+      [ngClass]="{'bg-success': isPositive(), 'bg-danger': isNegative()}">
+
+  <div class="card-body">
+
+    <h5 class="card-title">{{stock.symbol.toUpperCase()}}</h5>
+
+    <h6 class="card-text" *ngIf="!stock.lastTradePriceOnly">
+      ---
+    </h6>
+
+    <h6 class="card-text">
+      {{stock.lastTradePriceOnly | currency:'USD':'symbol':'.2'}}
+    </h6>
+
+    <p class="card-text" *ngIf="!stock.change">
+      ---
+    </p>
+
+    <p class="card-text">
+      <span>{{stock.change | currency:'USD':'symbol':'.2'}}</span> <span *ngIf="stock.changeInPercent">({{stock.changeInPercent | percent: '.2'}})</span>
+    </p>
+
+  </div>
+
+</div>
