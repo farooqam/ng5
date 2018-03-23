@@ -11,10 +11,6 @@ export class AppComponent {
   stocks: Array<Stock>;
 
   constructor(private _stockService: StockService) {
-    
-    _stockService.load(['MSFT']).subscribe(stocks => {
-      console.log(stocks);
-      this.stocks = stocks;
-    });
+    _stockService.stocks.subscribe(stocks => this.stocks = stocks);
   }
 }

@@ -7,10 +7,12 @@ import { StockServiceSettings } from './stockServiceSettings';
 @Injectable()
 export class StockService {
 
+    stocks: Observable<Stock[]>;
+
     constructor(
         private _settings: StockServiceSettings,
         private _http: HttpClient) { 
-            
+            this.stocks = this.load(['MSFT']);
         }
 
     get(): Array<string> {
@@ -27,7 +29,7 @@ export class StockService {
         return this.get();
     }
 
-    load(symbols): Observable<Stock[]> {
+    private load(symbols): Observable<Stock[]> {
         if(!symbols) {
             return;
         }
