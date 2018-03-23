@@ -29,7 +29,7 @@ export class StockService {
         return this.get();
     }
 
-    private load(symbols): Observable<Stock[]> {
+    private load(symbols: Array<string>): Observable<Stock[]> {
         if(!symbols) {
             return;
         }
