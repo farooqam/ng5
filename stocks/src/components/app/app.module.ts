@@ -6,12 +6,14 @@ import { SummaryComponent } from '../summary/summary/summary.component';
 import { StockService } from '../../services/stock/stock.service';
 import { StockServiceSettings } from '../../services/stock/stockServiceSettings';
 import { DashboardComponent } from '../dashboard/dashboard.component';
+import { NoPriceDataComponent } from '../noPriceData/noPriceData.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SummaryComponent,
-    DashboardComponent
+    DashboardComponent,
+    NoPriceDataComponent
 ],
   imports: [
     BrowserModule,

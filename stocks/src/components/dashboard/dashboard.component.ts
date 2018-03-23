@@ -20,4 +20,8 @@ export class DashboardComponent implements OnInit {
     this._stockService.stocks.subscribe(stocks => this.stocks = stocks);
   }
 
+  hasPriceData(stock: Stock): boolean {
+    return stock.lastTradePriceOnly != null;
+  }
+
 }
