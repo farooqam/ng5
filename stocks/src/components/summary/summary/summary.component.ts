@@ -20,7 +20,11 @@ export class SummaryComponent implements OnInit {
   }
 
   isPositive(): boolean {
-    return !this.isNegative();
+    return !this.isNegative() && !this.noStockData();
+  }
+
+  noStockData() : boolean {
+    return !this.stock.lastTradePriceOnly;
   }
 
 }

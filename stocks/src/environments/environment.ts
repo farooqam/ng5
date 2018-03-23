@@ -6,5 +6,5 @@
 export const environment = {
   production: false,
   apiBaseUrl: 'https://angular2-in-action-api.herokuapp.com/stocks',
-  stocks: 'MSFT,AAPL,GOOG,FB'
+  stocks: 'MSFT,AAPL,GOOG,FB,AMZN,AGI,LFIN,XXX'
 };
