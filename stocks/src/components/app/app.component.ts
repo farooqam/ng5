@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { StockService, Stock } from '../../services/stock/stock.service';
+import { StockService } from '../../services/stock/stock.service';
+import { Stock } from '../../services/stock/stock';
 
 @Component({
   selector: 'app-root',

@@ -1,16 +1,10 @@
 import { Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import { Stock } from './stock';
 
 let stocks: Array<string> = ['MSFT', 'AAPL', 'GOOG', 'FB'];
 let apiBaseUrl: string = 'https://angular2-in-action-api.herokuapp.com/stocks';
-
-export interface Stock {
-    symbol: string,
-    lastTradePriceOnly: number,
-    change: number,
-    changeInPercent: number
-}
 
 @Injectable()
 export class StockService {
