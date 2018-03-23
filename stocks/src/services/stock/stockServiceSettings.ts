@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
+import {environment } from '../../environments/environment';
 
 @Injectable()
 export class StockServiceSettings {
-    apiBaseUrl: string = 'https://angular2-in-action-api.herokuapp.com/stocks';
-    stocks: Array<string> = ['MSFT', 'AAPL', 'GOOG', 'FB'];
+    apiBaseUrl: string = environment.apiBaseUrl;
+    stocks: Array<string> = environment.stocks.split(',');
 }
 
