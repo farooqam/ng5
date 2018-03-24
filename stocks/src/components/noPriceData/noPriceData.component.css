@@ -2,4 +2,10 @@
     color: black;
     background-color: white;
     width: 400px;
+    opacity: 1;
+  }
+
+  .oi-warning {
+    opacity: 1;
+    color: orange;
   }
