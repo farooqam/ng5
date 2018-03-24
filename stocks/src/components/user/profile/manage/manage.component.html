@@ -1,7 +1,7 @@
 <form [formGroup]="formModel" (ngSubmit)="onSubmit">
   <div class="form-group">
     <input type="text" placeholder="Add stock symbol" formControlName="symbolToAdd">
-    <button class="btn btn-primary" (click)="addSymbol()">
+    <button class="btn btn-primary" (click)="addSymbol()" [disabled]="shouldDisable()">
       <span class="oi oi-plus"></span>
     </button>
   </div>
@@ -9,8 +9,8 @@
     <div class="form-group" 
         *ngFor="let profileSymbol of getProfileSymbols().controls; let i = index"
         [formGroupName]="i">
-      <input type="text" [value]="profileSymbol.value">
-      <button class="btn btn-default" (click)="removeSymbol(i)"><span class="oi oi-trash"></span></button>
+      <input disabled type="text" [value]="profileSymbol.value">
+      <button class="btn btn-danger" (click)="removeSymbol(i)"><span class="oi oi-trash"></span></button>
     </div>
   </div>
 </form>

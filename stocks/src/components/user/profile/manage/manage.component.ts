@@ -41,6 +41,11 @@ export class ManageComponent implements OnInit {
     this.setSymbolToAdd('');
   }
 
+  shouldDisable(): boolean {
+    let symbolToAdd = this.formModel.value.symbolToAdd as string;
+    return symbolToAdd.length == 0;
+  }
+
   private setSymbolToAdd(symbol): void {
     this.formModel.setControl('symbolToAdd', new FormControl(symbol));
   }
