@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import {NgbModule, NgbTooltip} from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { SummaryComponent } from '../summary/summary/summary.component';
 import { StockService } from '../../services/stock/stock.service';
@@ -17,9 +18,10 @@ import { NoPriceDataComponent } from '../noPriceData/noPriceData.component';
 ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule.forRoot() 
   ],
-  providers: [StockService, StockServiceSettings],
+  providers: [NgbTooltip, StockService, StockServiceSettings],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
