@@ -1,6 +1,7 @@
 <div *ngIf="!stocks">
   Loading...
 </div>
+<h2>Dashboard</h2>
 <div class="row">
     <div class="col-sm-3" *ngFor="let stock of stocks">
         <stock-summary *ngIf="hasPriceData(stock)" [stock]="stock"></stock-summary>
