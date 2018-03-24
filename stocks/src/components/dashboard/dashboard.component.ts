@@ -17,7 +17,9 @@ export class DashboardComponent implements OnInit {
    }
 
   ngOnInit() {
-    this._stockService.stocks.subscribe(stocks => this.stocks = stocks);
+    this._stockService.loadAll().subscribe(stocks => {
+      this.stocks = stocks;
+      console.log(this.stocks);});
   }
 
   hasPriceData(stock: Stock): boolean {

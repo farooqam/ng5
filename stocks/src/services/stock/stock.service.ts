@@ -12,7 +12,6 @@ export class StockService {
     constructor(
         private _settings: StockServiceSettings,
         private _http: HttpClient) { 
-            this.stocks = this.load(this._settings.stocks);
         }
 
     get(): Array<string> {
@@ -21,6 +20,7 @@ export class StockService {
 
     add(stock): Array<string> {
         this._settings.stocks.push(stock);
+        console.log(this._settings.stocks);
         return this.get();
     }
 
@@ -29,12 +29,8 @@ export class StockService {
         return this.get();
     }
 
-    private load(symbols: Array<string>): Observable<Stock[]> {
-        if(!symbols) {
-            return;
-        }
-
-        let fullUrl = `${this._settings.apiBaseUrl}/snapshot?symbols=${symbols.join()}`;
+    loadAll(): Observable<Stock[]> {
+        let fullUrl = `${this._settings.apiBaseUrl}/snapshot?symbols=${this._settings.stocks.join()}`;
         return this._http.get<Array<Stock>>(fullUrl);
     }
 }

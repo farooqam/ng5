@@ -31,14 +31,17 @@ export class ManageComponent implements OnInit {
 
   addSymbol(): void {
     let model = this.formModel.value;
-    let symbolToAdd = model.symbolToAdd;
-    this.getProfileSymbols().insert(0, new FormControl(symbolToAdd.toUpperCase()));
+    let symbolToAdd = model.symbolToAdd.toUpperCase();
+    this.getProfileSymbols().push(new FormControl(symbolToAdd));
     this.setSymbolToAdd('');
+    this._stockService.add(symbolToAdd);
   }
 
   removeSymbol(index: number): void {
+    let symbol = this.getProfileSymbols().at(index).value;
     this.getProfileSymbols().removeAt(index);
     this.setSymbolToAdd('');
+    this._stockService.remove(symbol);
   }
 
   shouldDisable(): boolean {
