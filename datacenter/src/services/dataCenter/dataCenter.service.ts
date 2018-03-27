@@ -14,47 +14,39 @@ export class DataCenterService {
                     {
                         name: 'node1',
                         metrics: [
-                            {key:'numericMetric', value: 100.12},
-                            {key: 'textMetric', value: 'Hello'},
-                            {key: 'objectMetric', value: {
-                                'foo': 'bar',
-                                'baz': 123
-                            }}
+                            {key:'cpuPct', value: 88.343},
+                            {key: 'availMemPct', value: 50}
+                            
                         ]
                     },
                     {
                         name: 'node2',
                         metrics: [
-                            {key:'numericMetric', value: 100.12},
-                            {key: 'textMetric', value: 'Hello'},
-                            {key: 'objectMetric', value: {
-                                'foo': 'bar',
-                                'baz': 123
-                            }}
+                            {key:'cpuPct', value: 77.110},
+                            {key: 'availMemPct', value: 80}
+                            
                         ]
                     },
                     {
                         name: 'node3',
                         metrics: [
-                            {key:'numericMetric', value: 100.12},
-                            {key: 'textMetric', value: 'Hello'},
-                            {key: 'objectMetric', value: {
-                                'foo': 'bar',
-                                'baz': 123
-                            }}
+                            {key:'cpuPct', value: 99.001},
+                            {key: 'availMemPct', value: 5}
+                            
                         ]
                     },
                     {
                         name: 'node4',
                         metrics: [
-                            {key:'numericMetric', value: 100.12},
-                            {key: 'textMetric', value: 'Hello'},
-                            {key: 'objectMetric', value: {
-                                'foo': 'bar',
-                                'baz': 123
-                            }}
+                            {key:'cpuPct', value: 20},
+                            {key: 'availMemPct', value: 99}
+                            
                         ]
                     }
+                ],
+                thresholds: [
+                    {metricKey: 'cpuPct', warnValue: 80, dangerValue: 90},
+                    {metricKey: 'availMemPct', warnValue: 10, dangerValue: 5}
                 ]
             },
             {
@@ -63,47 +55,39 @@ export class DataCenterService {
                     {
                         name: 'node1',
                         metrics: [
-                            {key:'numericMetric', value: 100.12},
-                            {key: 'textMetric', value: 'Hello'},
-                            {key: 'objectMetric', value: {
-                                'foo': 'bar',
-                                'baz': 123
-                            }}
+                            {key:'cpuPct', value: 20},
+                            {key: 'availMemPct', value: 99}
+                            
                         ]
                     },
                     {
                         name: 'node2',
                         metrics: [
-                            {key:'numericMetric', value: 100.12},
-                            {key: 'textMetric', value: 'Hello'},
-                            {key: 'objectMetric', value: {
-                                'foo': 'bar',
-                                'baz': 123
-                            }}
+                            {key:'cpuPct', value: 45},
+                            {key: 'availMemPct', value: 80}
+                            
                         ]
                     },
                     {
                         name: 'node3',
                         metrics: [
-                            {key:'numericMetric', value: 100.12},
-                            {key: 'textMetric', value: 'Hello'},
-                            {key: 'objectMetric', value: {
-                                'foo': 'bar',
-                                'baz': 123
-                            }}
+                            {key:'cpuPct', value: 55},
+                            {key: 'availMemPct', value: 60}
+                            
                         ]
                     },
                     {
                         name: 'node4',
                         metrics: [
-                            {key:'numericMetric', value: 100.12},
-                            {key: 'textMetric', value: 'Hello'},
-                            {key: 'objectMetric', value: {
-                                'foo': 'bar',
-                                'baz': 123
-                            }}
+                            {key:'cpuPct', value: 88},
+                            {key: 'availMemPct', value: 3}
+                            
                         ]
                     }
+                ],
+                thresholds: [
+                    {metricKey: 'cpuPct', warnValue: 50, dangerValue: 70},
+                    {metricKey: 'availMemPct', warnValue: 50, dangerValue: 25}
                 ]
             }
         ];
