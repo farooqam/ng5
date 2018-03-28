@@ -3,6 +3,6 @@ import { Threshold } from "./threshold";
 
 export interface Cluster {
     name: string;
-    nodes: Array<ClusterNode>;
+    clusterNodes: Array<ClusterNode>;
     thresholds: Array<Threshold>;
 }

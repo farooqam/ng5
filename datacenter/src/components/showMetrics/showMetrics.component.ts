@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataCenterService } from '../../services/dataCenter/dataCenter.service';
 import { Cluster } from '../../services/dataCenter/cluster';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-show-metrics',
@@ -14,8 +15,10 @@ export class ShowMetricsComponent implements OnInit {
   constructor(private _dataCenterService: DataCenterService) { }
 
   ngOnInit() {
-    this.clusters = this._dataCenterService.getClusters();
-    console.log(this.clusters);
+    this._dataCenterService.getClusters().subscribe(clusters => {
+      this.clusters = clusters;
+    });
+    
   }
 
 }
