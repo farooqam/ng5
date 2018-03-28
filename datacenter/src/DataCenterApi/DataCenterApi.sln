@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCenterApi", "DataCenterApi\DataCenterApi.csproj", "{ED15B8D1-309E-45C7-AF4A-4B323C71346B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataCenterApi", "DataCenterApi\DataCenterApi.csproj", "{ED15B8D1-309E-45C7-AF4A-4B323C71346B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCenterApi.UnitTests", "DataCenterApi.UnitTests\DataCenterApi.UnitTests.csproj", "{2ED7E88A-4F35-42F8-86AB-FA3DE0979FF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{ED15B8D1-309E-45C7-AF4A-4B323C71346B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED15B8D1-309E-45C7-AF4A-4B323C71346B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED15B8D1-309E-45C7-AF4A-4B323C71346B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED7E88A-4F35-42F8-86AB-FA3DE0979FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED7E88A-4F35-42F8-86AB-FA3DE0979FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED7E88A-4F35-42F8-86AB-FA3DE0979FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED7E88A-4F35-42F8-86AB-FA3DE0979FF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

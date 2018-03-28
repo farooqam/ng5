@@ -35,8 +35,8 @@ namespace DataCenterApi.Controllers
         },
         Thresholds = new List<Threshold>
         {
-          new Threshold {MetricKey = "cpuPct", WarnValue = 80, DangerValue = 90},
-          new Threshold {MetricKey = "availMemPct", WarnValue = 10, DangerValue = 5}
+          new Threshold {MetricKey = "cpuPct", WarnValue = 80.0, DangerValue = 90.0},
+          new Threshold {MetricKey = "availMemPct", WarnValue = 10.0, DangerValue = 5.0}
         }
       },
       new Cluster
@@ -63,8 +63,8 @@ namespace DataCenterApi.Controllers
         },
         Thresholds = new List<Threshold>
         {
-          new Threshold {MetricKey = "cpuPct", WarnValue = 50, DangerValue = 70},
-          new Threshold {MetricKey = "availMemPct", WarnValue = 50, DangerValue = 25}
+          new Threshold {MetricKey = "cpuPct", WarnValue = 5.0, DangerValue = 70.0},
+          new Threshold {MetricKey = "availMemPct", WarnValue = 5.0, DangerValue = 25.0}
         }
       }
     };
@@ -82,27 +82,32 @@ namespace DataCenterApi.Controllers
       return _clusters.AsEnumerable();
     }
 
-    private void AddCpuMetric(Cluster cluster, int low, int high)
+    private void AddCpuMetric(Cluster cluster, double low, double high)
     {
       var range = Math.Abs(high - low);
 
       foreach (var node in cluster.ClusterNodes)
       {
         var random = new Random();
-        var cpu = random.NextDouble() * range;
-        node.Metrics.Add(new Metric {Key = "cpuPct", Value = cpu});
+        var cpu = random.NextDouble(low, high);
+        var metric = new Metric {Key = "cpuPct", Value = cpu, Description = "Utilization of CPU cores."};
+        metric.SetStatus(cluster.Thresholds);
+        node.Metrics.Add(metric);
+        
       }
     }
 
-    private void AddAvailableMemoryPctMetric(Cluster cluster, int low, int high)
+    private void AddAvailableMemoryPctMetric(Cluster cluster, double low, double high)
     {
       var range = Math.Abs(high - low);
 
       foreach (var node in cluster.ClusterNodes)
       {
         var random = new Random();
-        var mem = random.NextDouble() * range;
-        node.Metrics.Add(new Metric { Key = "availMemPct", Value = mem });
+        var mem = random.NextDouble(low, high);
+        var metric = new Metric {Key = "availMemPct", Value = mem, Description = "Percentage of memory available."};
+        metric.SetStatus(cluster.Thresholds);
+        node.Metrics.Add(metric);
       }
     }
   }
