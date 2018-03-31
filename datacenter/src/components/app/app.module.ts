@@ -7,12 +7,14 @@ import { NavBarComponent } from '../navBar/navBar.component';
 import { DataCenterService } from '../../services/dataCenter/dataCenter.service';
 import { ShowMetricsComponent } from '../showMetrics/showMetrics.component';
 import { DataCenterServiceSettings } from '../../services/dataCenter/dataCenterServiceSettings';
+import { MetricComponent } from '.c:/mysrc/ng5/datacenter/src/components/metric/metric.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    ShowMetricsComponent
+    ShowMetricsComponent,
+    MetricComponent
 ],
   imports: [
     BrowserModule,
