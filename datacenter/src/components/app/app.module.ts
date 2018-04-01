@@ -8,13 +8,15 @@ import { DataCenterService } from '../../services/dataCenter/dataCenter.service'
 import { ShowMetricsComponent } from '../showMetrics/showMetrics.component';
 import { DataCenterServiceSettings } from '../../services/dataCenter/dataCenterServiceSettings';
 import { MetricComponent } from '../metric/metric.component';
+import { DashboardComponent } from '../dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     ShowMetricsComponent,
-    MetricComponent
+    MetricComponent,
+    DashboardComponent
 ],
   imports: [
     BrowserModule,
