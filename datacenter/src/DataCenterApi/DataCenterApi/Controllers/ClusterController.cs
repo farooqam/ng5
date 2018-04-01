@@ -79,6 +79,11 @@ namespace DataCenterApi.Controllers
       AddCpuMetric(_clusters[1], 10, 80);
       AddAvailableMemoryPctMetric(_clusters[1], 90, 20);
 
+      foreach (var cluster in _clusters)
+      {
+        cluster.SetStatus();
+      }
+
       return _clusters.AsEnumerable();
     }
 

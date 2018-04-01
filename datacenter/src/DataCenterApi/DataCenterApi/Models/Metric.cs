@@ -11,7 +11,7 @@ namespace DataCenterApi.Models
 
     public string Description { get; set; }
 
-    public MetricStatus Status { get; private set; }
+    public MetricStatus Status { get; set; }
 
     public void SetStatus(IEnumerable<Threshold> thresholds)
     {
