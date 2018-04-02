@@ -2,10 +2,11 @@
     <div class="card">
         <div class="card-body">
           <div class="card-header">
-              <h5 class="card-title">{{cluster.name}} ({{cluster.status}})</h5>
+              <h5 class="card-title">{{cluster.name}}</h5>
           </div>
           <div class="card-text">
-            <p>Node count: {{cluster.clusterNodes.length}}</p>
+            <p>Cluster status: <span [ngClass]="getClassFromStatus(cluster.status)"></span></p>
+            <p>Node count: {{nodeCount(cluster)}}</p>
           </div>
       </div>
     </div>

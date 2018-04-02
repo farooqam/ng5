@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataCenterService } from '../../services/dataCenter/dataCenter.service';
 import { Cluster } from '../../services/dataCenter/cluster';
+import { ClusterSettings } from 'cluster';
+import { ClusterStatus } from '../../services/dataCenter/clusterStatus.enum';
 
 @Component({
   selector: 'app-dashboard',
@@ -21,4 +23,20 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  nodeCount(cluster: Cluster): number {
+    return cluster.clusterNodes.length;
+  }
+
+  getClassFromStatus(status: ClusterStatus): string {
+    switch(status){
+      case ClusterStatus.Good:
+        return 'oi oi-circle-check';
+      case ClusterStatus.Warn:
+        return 'oi oi-warning';
+      case ClusterStatus.Danger:
+        return 'oi oi-circle-x';
+      default:
+        return 'oi oi-question-mark';        
+    }
+  }
 }

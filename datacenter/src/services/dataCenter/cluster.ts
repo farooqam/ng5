@@ -6,9 +6,6 @@ export interface Cluster {
     name: string;
     clusterNodes: Array<ClusterNode>;
     thresholds: Array<Threshold>;
-    status: ClusterStatus
+    status: ClusterStatus;
 
-    nodeCount: number {
-        return this.clusterNodes.length;
-    }
 }
