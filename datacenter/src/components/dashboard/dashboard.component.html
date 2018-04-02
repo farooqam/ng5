@@ -1,20 +1,25 @@
-<div *ngFor="let cluster of clusters">
-    <div class="card">
-        <div class="card-body">
-          <div class="card-header">
-              <div class="row">
-                  <div class="col-sm-6">
-                        <p class="card-title">{{cluster.name.toUpperCase()}}</p>
-                  </div>
-                  <div class="col-sm-6">
-                        <app-cluster-status [status]="cluster.status"></app-cluster-status>
-                  </div>                  
-              </div>
-              
-          </div>
-          <div class="card-text">
-            <p>Node count: {{nodeCount(cluster)}}</p>
-          </div>
-      </div>
+<div class="row">
+    <div *ngFor="let cluster of clusters">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p class="card-title">{{cluster.name.toUpperCase()}}</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <app-cluster-status [status]="cluster.status"></app-cluster-status>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-text">
+                        <p>Node count: {{nodeCount(cluster)}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
