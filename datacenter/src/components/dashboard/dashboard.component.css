@@ -1,7 +1,12 @@
 .card {
-    width: 18rem;
+    width: 25rem;
 }
 
 .row {
     margin-top: 50px;
+}
+
+.card-title {
+    font-weight: bolder;
+    font-size: x-large
 }
