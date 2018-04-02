@@ -36,7 +36,7 @@ namespace DataCenterApi.Controllers
         Thresholds = new List<Threshold>
         {
           new Threshold {MetricKey = "cpuPct", WarnValue = 80.0, DangerValue = 90.0},
-          new Threshold {MetricKey = "availMemPct", WarnValue = 10.0, DangerValue = 5.0}
+          new Threshold {MetricKey = "availMemPct", WarnValue = 90.0, DangerValue = 95.0}
         }
       },
       new Cluster
@@ -64,7 +64,7 @@ namespace DataCenterApi.Controllers
         Thresholds = new List<Threshold>
         {
           new Threshold {MetricKey = "cpuPct", WarnValue = 5.0, DangerValue = 70.0},
-          new Threshold {MetricKey = "availMemPct", WarnValue = 5.0, DangerValue = 25.0}
+          new Threshold {MetricKey = "availMemPct", WarnValue = 75.0, DangerValue = 95.0}
         }
       }
     };
