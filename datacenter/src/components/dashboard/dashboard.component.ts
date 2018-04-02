@@ -27,16 +27,4 @@ export class DashboardComponent implements OnInit {
     return cluster.clusterNodes.length;
   }
 
-  getClassFromStatus(status: ClusterStatus): string {
-    switch(status){
-      case ClusterStatus.Good:
-        return 'oi oi-circle-check';
-      case ClusterStatus.Warn:
-        return 'oi oi-warning';
-      case ClusterStatus.Danger:
-        return 'oi oi-circle-x';
-      default:
-        return 'oi oi-question-mark';        
-    }
-  }
 }

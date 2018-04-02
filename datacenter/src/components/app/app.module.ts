@@ -9,6 +9,7 @@ import { ShowMetricsComponent } from '../showMetrics/showMetrics.component';
 import { DataCenterServiceSettings } from '../../services/dataCenter/dataCenterServiceSettings';
 import { MetricComponent } from '../metric/metric.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
+import { ClusterStatusComponent } from '../clusterStatus/clusterStatus.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
     NavBarComponent,
     ShowMetricsComponent,
     MetricComponent,
-    DashboardComponent
+    DashboardComponent,
+    ClusterStatusComponent
 ],
   imports: [
     BrowserModule,

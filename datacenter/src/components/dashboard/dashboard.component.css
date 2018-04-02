@@ -1,15 +1,3 @@
-.oi-circle-x {
-    color: red;
-}
-
-.oi-warning {
-    color: goldenrod;
-}
-
-.oi-circle-check {
-    color: green;
-}
-
-.oi-question-mark {
-    color: gray;
+.card {
+    width: 18rem;
 }
