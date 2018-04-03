@@ -11,6 +11,7 @@ import { MetricComponent } from '../metric/metric.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { ClusterStatusComponent } from '../clusterStatus/clusterStatus.component';
 import { NodeListComponent } from '../nodeList/nodeList.component';
+import { NodeStatusComponent } from '../nodeStatus/nodeStatus.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NodeListComponent } from '../nodeList/nodeList.component';
     MetricComponent,
     DashboardComponent,
     ClusterStatusComponent,
-    NodeListComponent
+    NodeListComponent,
+    NodeStatusComponent
 ],
   imports: [
     BrowserModule,

@@ -7,8 +7,8 @@
     </thead>
     <tbody>
       <tr *ngFor="let node of nodes">
-        <td>{{node.name}}</td>
-        <td>{{node.status}}</td>
+        <td>{{node.name.toUpperCase()}}</td>
+        <td><app-node-status [status]="node.status"></app-node-status></td>
       </tr>
     </tbody>
   </table>

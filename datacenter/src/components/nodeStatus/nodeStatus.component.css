@@ -1,0 +1,19 @@
+.oi {
+    font-size: x-large;
+}
+
+.oi-circle-x {
+    color: red;
+}
+
+.oi-warning {
+    color: goldenrod;
+}
+
+.oi-circle-check {
+    color: green;
+}
+
+.oi-question-mark {
+    color: gray;
+}
