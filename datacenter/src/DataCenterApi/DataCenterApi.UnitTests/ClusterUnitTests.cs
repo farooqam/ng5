@@ -30,7 +30,7 @@ namespace DataCenterApi.UnitTests
       {
         var cluster = new Cluster
         {
-          ClusterNodes = new List<ClusterNode>
+          Nodes = new List<ClusterNode>
           {
             new ClusterNode
             {

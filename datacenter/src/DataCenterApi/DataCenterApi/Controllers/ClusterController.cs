@@ -14,7 +14,7 @@ namespace DataCenterApi.Controllers
       new Cluster
       {
         Name = "cluster1",
-        ClusterNodes = new List<ClusterNode>
+        Nodes = new List<ClusterNode>
         {
           new ClusterNode
           {
@@ -42,7 +42,7 @@ namespace DataCenterApi.Controllers
       new Cluster
       {
         Name = "cluster2",
-        ClusterNodes = new List<ClusterNode>
+        Nodes = new List<ClusterNode>
         {
           new ClusterNode
           {
@@ -82,6 +82,11 @@ namespace DataCenterApi.Controllers
       foreach (var cluster in _clusters)
       {
         cluster.SetStatus();
+
+        foreach (var node in cluster.Nodes)
+        {
+          node.SetStatus();
+        }
       }
 
       return _clusters.AsEnumerable();
@@ -91,7 +96,7 @@ namespace DataCenterApi.Controllers
     {
       var range = Math.Abs(high - low);
 
-      foreach (var node in cluster.ClusterNodes)
+      foreach (var node in cluster.Nodes)
       {
         var random = new Random();
         var cpu = random.NextDouble(low, high);
@@ -106,7 +111,7 @@ namespace DataCenterApi.Controllers
     {
       var range = Math.Abs(high - low);
 
-      foreach (var node in cluster.ClusterNodes)
+      foreach (var node in cluster.Nodes)
       {
         var random = new Random();
         var mem = random.NextDouble(low, high);
