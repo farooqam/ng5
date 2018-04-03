@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataCenterService } from '../../services/dataCenter/dataCenter.service';
 import { Cluster } from '../../services/dataCenter/cluster';
-import { ClusterSettings } from 'cluster';
 import { ClusterStatus } from '../../services/dataCenter/clusterStatus.enum';
 
 @Component({
@@ -20,6 +19,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this._dataCenterService.getClusters().subscribe(clusters => {
       this.clusters = clusters;
+      console.log(this.clusters);
     });
   }
 

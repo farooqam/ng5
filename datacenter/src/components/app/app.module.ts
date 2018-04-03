@@ -10,6 +10,7 @@ import { DataCenterServiceSettings } from '../../services/dataCenter/dataCenterS
 import { MetricComponent } from '../metric/metric.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { ClusterStatusComponent } from '../clusterStatus/clusterStatus.component';
+import { NodeListComponent } from '../nodeList/nodeList.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ClusterStatusComponent } from '../clusterStatus/clusterStatus.component
     ShowMetricsComponent,
     MetricComponent,
     DashboardComponent,
-    ClusterStatusComponent
+    ClusterStatusComponent,
+    NodeListComponent
 ],
   imports: [
     BrowserModule,

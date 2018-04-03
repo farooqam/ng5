@@ -1,0 +1,14 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let node of nodes">
+        <td>{{node.name}}</td>
+        <td>{{node.status}}</td>
+      </tr>
+    </tbody>
+  </table>
