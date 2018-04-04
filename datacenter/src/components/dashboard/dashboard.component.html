@@ -15,11 +15,13 @@
 
                     </div>
                     <div class="card-text">
-                        <app-node-list [nodes]="cluster.nodes"></app-node-list> 
+                        <app-node-list (onNodeClicked)="handleNodeClicked($event)" [nodes]="cluster.nodes"></app-node-list> 
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
+</div>
+<div class="row" *ngIf="showNodeDetail">
+    <app-node-detail [node]="getSelectedNode()"></app-node-detail> 
 </div>

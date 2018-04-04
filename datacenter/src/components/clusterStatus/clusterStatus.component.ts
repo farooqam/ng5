@@ -1,10 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { ClusterStatus } from '../../services/dataCenter/clusterStatus.enum';
 
 @Component({
   selector: 'app-cluster-status',
   templateUrl: './clusterStatus.component.html',
-  styleUrls: ['./clusterStatus.component.css']
+  styleUrls: ['./clusterStatus.component.css'],
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class ClusterStatusComponent implements OnInit {
 

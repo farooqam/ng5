@@ -1,10 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { NodeStatus } from '../../services/dataCenter/nodeStatus.enum';
 
 @Component({
   selector: 'app-node-status',
   templateUrl: './nodeStatus.component.html',
-  styleUrls: ['./nodeStatus.component.css']
+  styleUrls: ['./nodeStatus.component.css'],
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class NodeStatusComponent implements OnInit {
 

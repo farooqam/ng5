@@ -12,6 +12,7 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 import { ClusterStatusComponent } from '../clusterStatus/clusterStatus.component';
 import { NodeListComponent } from '../nodeList/nodeList.component';
 import { NodeStatusComponent } from '../nodeStatus/nodeStatus.component';
+import { NodeDetailComponent } from '../nodeDetail/nodeDetail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NodeStatusComponent } from '../nodeStatus/nodeStatus.component';
     DashboardComponent,
     ClusterStatusComponent,
     NodeListComponent,
-    NodeStatusComponent
+    NodeStatusComponent,
+    NodeDetailComponent
 ],
   imports: [
     BrowserModule,
