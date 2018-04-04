@@ -8,8 +8,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class NavBarComponent implements OnInit {
 
   @Output() onRefresh: EventEmitter<null> = new EventEmitter<null>();
-  
-  constructor() { }
 
   ngOnInit() {
   }
