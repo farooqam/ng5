@@ -17,14 +17,21 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._dataCenterService.getClusters().subscribe(clusters => {
-      this.clusters = clusters;
-      console.log(this.clusters);
-    });
+    this.getData();
   }
 
   nodeCount(cluster: Cluster): number {
     return cluster.clusterNodes.length;
   }
 
+  refresh(): void {
+    console.log('refreshing data...');
+    this.getData();
+  }
+
+  private getData(): void {
+    this._dataCenterService.getClusters().subscribe(clusters => {
+      this.clusters = clusters;
+    });
+  }
 }

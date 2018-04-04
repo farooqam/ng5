@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://datacenterapi20180327041935.azurewebsites.net/api/clusters',
+  apiBaseUrl: 'http://localhost:50778/api/clusters',
 };
