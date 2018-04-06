@@ -8,7 +8,9 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "dockerDeploy": "docker build -t datacenter-app:prod . && docker run -d --rm --name datacenter-app -p 4200:4200 datacenter-app:prod",    
+    "dockerRun": "npm run build && ng serve --prod -H 0.0.0.0"
   },
   "private": true,
   "dependencies": {
